@@ -1,6 +1,4 @@
 {
-    "plugins": [
-        "https://github.com/gmassanek/gitbook-plugin-js-sequence-diagram"
-    ],
+    "plugins": [],
     "pluginsConfig": {}
 }
