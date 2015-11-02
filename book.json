@@ -1,4 +1,6 @@
 {
-    "plugins": [],
+    "plugins": [
+        "js-sequence-hand-diagram"
+    ],
     "pluginsConfig": {}
 }
