@@ -9,7 +9,7 @@ Title: Initial Request
 participant Client
 participant Tevo API
 Client->Tevo API: POST data
-Tevo API->Client: partial Response Object
+Tevo API->Client: (partial) Response Object
 ```
 
 
