@@ -2,7 +2,8 @@
     "plugins": [
         "js-sequence-hand-diagram",
         "atoc",
-        "toc"
+        "toc",
+        "js-sequence-diagram"
     ],
     "pluginsConfig": {}
 }
