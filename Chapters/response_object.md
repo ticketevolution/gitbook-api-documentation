@@ -14,7 +14,7 @@ Tevo API->Client: (partial) Response Object
 
 ``` sequence
 Title: After Processing Request
-participant Client Webook URL
+participant Client Webhook URL
 participant Tevo API
 Tevo API->Client Webhook URL: (complete) Response Object
 ```
