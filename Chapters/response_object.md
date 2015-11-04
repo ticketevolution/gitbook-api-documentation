@@ -21,7 +21,7 @@ Client-->Tevo API: GET requests/{resource}/id
 Tevo API-->Client: current Response Object
 ```
 
-## Response Object Format
+## Response Object Properties
 |         |                                           |
 |---------|-------------------------------------------|
 | id      | Response Object id                        |
