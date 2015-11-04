@@ -7,8 +7,6 @@ Welcome to the Ticket Evolution API Reference Material!
 Coming Soon!
 
 
-<!-- toc -->
-
 ``` sequence-hand
 Title: Opening An Order
 participant Client
@@ -19,5 +17,5 @@ Tevo API->Client: partial Response Object
 Tevo API->Webhook Callback URL: full Response Object
 ```
 
-
+<!-- toc -->
 
