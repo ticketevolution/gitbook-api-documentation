@@ -28,7 +28,7 @@ Tevo API-->Client: current Response Object
 |---------|-------------------------------------------|
 | id      | Response Object id                        |
 | state   | state of request in our system *(pending, in_process, completed, errored)* |
-| result  |                                           |
+| result  | Human friendly formatted state            |
 | error   |                                           |
 | params  |                                           |
 | payload |                                           |
