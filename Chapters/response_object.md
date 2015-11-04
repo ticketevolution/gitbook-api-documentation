@@ -4,12 +4,12 @@ Endpoints which have variable processing times, can respond with **Response Obje
 
 ## Response Object Lifecycle
 
-```sequence-hand
+``` sequence-hand
 Title: Initial Request
-participant: Client
-participant: Tevo API
+participant Client
+participant Tevo API
 Client->Tevo API: POST data
-Tevo API->Client: Basic Response Object
+Tevo API->Client: partial Response Object
 ```
 
 |         |                                           |
