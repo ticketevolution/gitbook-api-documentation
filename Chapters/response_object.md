@@ -4,19 +4,19 @@ Endpoints which have variable processing times, can respond with **Response Obje
 
 ## Response Object Lifecycle
 
-``` sequence
-Title: Initial Request
+```sequence-hand
+Title: Request Lifecycle
+participant Client Webhook URL
 participant Client
 participant Tevo API
-Client->Tevo API: POST data (provide webhook_url)
-Tevo API->Client: (partial) Response Object
-```
-
-``` sequence
-Title: After Processing Request
-participant Client Webhook URL
-participant Tevo API
-Tevo API->Client Webhook URL: (complete) Response Object
+Note over Client, Tevo API: Initial Request
+Client-->Tevo API: POST data (provide webhook_url)
+Tevo API-->Client: (partial) Response Object
+Note over Client, Tevo API: After Processing
+Tevo API-->Client Webhook URL: (complete) Response Object
+Note over Client, Tevo API: At Any Point
+Client-->Tevo API: GET requests/{resource}/id
+Tevo API-->Client: current Response Object
 ```
 
 |         |                                           |
