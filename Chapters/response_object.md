@@ -8,10 +8,16 @@ Endpoints which have variable processing times, can respond with **Response Obje
 Title: Initial Request
 participant Client
 participant Tevo API
-Client->Tevo API: POST data
+Client->Tevo API: POST data (provide webhook_url)
 Tevo API->Client: (partial) Response Object
 ```
 
+``` sequence
+Title: After Processing Request
+participant Client Webook URL
+participant Tevo API
+Tevo API->Client Webhook URL: (complete) Response Object
+```
 
 |         |                                           |
 |---------|-------------------------------------------|
