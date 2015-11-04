@@ -2,6 +2,8 @@
 
 Welcome to the Ticket Evolution API Reference Material!
 
+<!-- toc -->
+
 ## Getting Started
 
 Coming Soon!
@@ -17,8 +19,6 @@ Tevo API->Client: partial Response Object
 Tevo API->Webhook Callback URL: full Response Object
 ```
 
-## Table Of Contents
 
-<!-- toc -->
 
 g ad;lfk
