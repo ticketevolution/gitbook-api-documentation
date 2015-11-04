@@ -18,7 +18,3 @@ Client->Tevo API: POST /orders/open
 Tevo API->Client: partial Response Object
 Tevo API->Webhook Callback URL: full Response Object
 ```
-
-
-
-g ad;lfk
