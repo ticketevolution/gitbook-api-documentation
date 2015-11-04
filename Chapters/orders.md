@@ -1,5 +1,7 @@
 # Orders
 
+<!-- toc -->
+
 ## POST /v9/orders/open
 
 The */v9/ordres/create* endpoint has a potentially long response time.
