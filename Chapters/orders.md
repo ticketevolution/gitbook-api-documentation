@@ -1,57 +1,18 @@
 # Orders
 
+## POST /v9/orders/open
 
-``` sequence-hand
-Title: Opening An Order
-participant Client
-participant Webhook Callback URL
-participant Tevo API
-Client->Tevo API: POST /orders/open
-Tevo API->Client: partial Response Object
-Tevo API->Webhook Callback URL: full Response Object
-```
+The */v9/ordres/create* endpoint has a potentially long response time.
+Instead of waiting, the *open* endpoint will respond immediately with a  [Request Object](https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html).
+This can be used to lookup the request status at a later time.
 
+Endpoints responding with [Request Object's](https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html) accept a *webhook_url* property which will be automatically called when the request is finished processing.
 
-```
-=>  POST /orders/open
-<=  RESPONSE
-    {
-      :id,
-      :state => pending,
-      :result,
-      :error,
-      :params,
-      :order_details nil
-    }
-<= WEBHOOK
-  {
-    :id,
-    :state,
-    :result,
-    :error,
-    :params,
-    :order_details => {
-      :id
-    }
-  }
+### Properties
 
-=> GET /requests/orders/:id
-<= RESPONSE
-  {
-    :id,
-    :state,
-    :result,
-    :error,
-    :params,
-    :order_details => {
-      :id
-      ...
-    }
-  }
+The POST data must follow this format.
 
-=> GET /orders/show
-<= RESPONSE
-  {
-    :id
-  }
-```
+| Name        | Required | Description                                                                                                                                             |
+|-------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| webhook_url | no       | Resource to notify when [Completed Request Object](https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html) is ready |
+| orders      | yes      | 1 element array containing valid [Order POST data](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=9994275)                     |
