@@ -3,10 +3,5 @@
         "js-sequence-hand-diagram",
         "atoc"
     ],
-    "pluginsConfig": {
-      "atoc": {
-        "addClass": true,
-        "className": "atoc"
-      }
-    }
+    "pluginsConfig": {}
 }
