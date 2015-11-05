@@ -38,4 +38,4 @@ The only difference is the partial request will always have a *pending* *state*,
 | state   | pending       | state of request in our system *(pending, in_process, completed, errored)* |
 | error   | null          | Error information for resource                                             |
 | params  |               | Params provided with request                                               |
-| result  | null          | Request from request                                                      |
+| result  | null          | Result of request                                                      |
