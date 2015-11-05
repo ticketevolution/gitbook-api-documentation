@@ -8,7 +8,7 @@ Endpoints which have variable processing times, can respond with **Request Objec
 
 ## Request Object Lifecycle
 
-```sequence-hand
+```sequence
 Title: Request Lifecycle
 participant Client Webhook URL
 participant Client
