@@ -1,6 +1,6 @@
 # Request Object
 
-Endpoints which have variable processing times, can respond with **Request Objects**.  These objects wrap the request with information on the status of that request.  In most cases, the API invokes a webhook callback with this object.
+Endpoints which have variable processing times, can respond with **Request Objects**.  These objects wrap the request with information on the status of that request.  In most cases, the API invokes a [webhook][webhook] callback with this object.
 
 **Overview**
 
@@ -106,3 +106,4 @@ The only difference is the partial request will always have a *pending* *state*,
 }
 ```
 [**order_show](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=4129639)
+[weebhook]:http://www.programmableweb.com/news/what-are-webhooks-and-how-do-they-enable-real-time-web/2012/01/30
