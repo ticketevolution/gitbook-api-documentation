@@ -15,7 +15,11 @@ These objects are primarily used with endpoints supporting webhooks.
 
 ## Request Object Lifecycle
 
-These endpoints support both traditional POST/GET endpoints, as well as a POST/POST webhook behavior.  These strategies can be mixed and matched.
+These endpoints support both traditional POST/GET endpoints, as well as a POST/POST webhook behavior.  
+
+### POST/GET Lifecycle
+
+### POST/POST Lifecycle
 
 ```sequence
 Title: Request Lifecycle
@@ -27,9 +31,6 @@ Client-->Tevo API: POST data (provide webhook_url)
 Tevo API-->Client: (partial) Request Object
 Note over Client, Tevo API: After Processing
 Tevo API-->Client Webhook URL: (complete) Request Object
-Note over Client, Tevo API: At Any Point
-Client-->Tevo API: GET requests/{resource}/id
-Tevo API-->Client: current Request Object
 ```
 
 ## Partial and Complete Request Objects
