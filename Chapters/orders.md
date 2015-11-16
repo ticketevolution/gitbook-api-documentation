@@ -44,29 +44,30 @@ The POST data must follow this format.
 }
 ```
 
-**Success Response**
+**Webhook Response after processing**
 ```
 {
-  "orders": [
-    {
-      "buyer_id": "1116",
-      "seller_id": "1235",
-      "items": [
-        {
-          "price": "10",
-          "quantity": 2,
-          "ticket_group_id": "244910671",
-          "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
-        }
-      ]
-    }
-  ]
+  "id": 123,
+  "state": "completed",
+  "error": null,
+  "result": **order_show,
+  "params": {
+    "webhook_url": "http://client.com/webhook_callback",
+    "orders": [
+      {
+        "buyer_id": "1116",
+        "seller_id": "1235",
+        "items": [
+          {
+            "price": "10",
+            "quantity": 2,
+            "ticket_group_id": "244910671",
+            "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
+          }
+        ]
+      }
+    ],
+  }
 }
 ```
-
-**Error Response**
-```
-{
-  
-}
-```
+[**order_show](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=4129639)
