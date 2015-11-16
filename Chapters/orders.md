@@ -19,8 +19,6 @@ The POST data must follow this format.
 | webhook_url | no       | String | Resource to notify when [Completed Request Object][RequestObject] is ready |
 | orders      | yes      | Array |1 element array containing valid [Order POST data][OrderEndpoint]          |
 
-[RequestObject]: https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html
-[OrderEndpoint]: https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=9994275
 
 ### Examples
 
@@ -84,3 +82,6 @@ The POST data must follow this format.
 }
 ```
 [**order_show](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=4129639)
+
+[RequestObject]: https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html
+[OrderEndpoint]: https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=9994275
