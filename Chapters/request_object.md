@@ -26,10 +26,10 @@ Title: Request Lifecycle
 participant Client Webhook URL
 participant Client
 participant Tevo API
-Note over Client, Tevo API: Initial Request
+Note over Client, Tevo API: Step 1. Initial Request
 Client-->Tevo API: POST data (provide webhook_url)
 Tevo API-->Client: (partial) Request Object
-Note over Client, Tevo API: After Processing
+Note over Client, Tevo API: Step 2. Response After Processing
 Tevo API-->Client Webhook URL: (complete) Request Object
 ```
 
