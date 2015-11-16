@@ -41,7 +41,7 @@ participant Client
 participant Tevo API
 Client->Tevo API: POST data (provide webhook_url)
 Tevo API-->Client: (partial) Request Object
-Note over Client, Tevo API:  After Processing
+Note over Client, Tevo API: After Processing
 Tevo API->Client: POST (complete) Request Object
 ```
 
