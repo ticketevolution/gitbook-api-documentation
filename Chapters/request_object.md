@@ -39,3 +39,12 @@ The only difference is the partial request will always have a *pending* *state*,
 | error   | null          | Error information for resource                                             |
 | params  |               | Params provided with request                                               |
 | result  | null          | Result of request                                                      |
+
+## Examples
+
+### Request /v9/orders/open
+```
+{
+
+}
+```
