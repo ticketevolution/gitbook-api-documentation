@@ -41,9 +41,9 @@ participant Client
 participant Tevo API
 Note over Client, Tevo API: Step 1. Initial Request
 Client->Tevo API: POST data (provide webhook_url)
-Tevo API-->Client: (partial) Request Object to check state, and save id
+Tevo API-->Client: (partial) Request Object
 Note over Client, Tevo API: Step 2. Response After Processing
-Tevo API-->Client: (complete) Request Object
+Tevo API->Client: POST (complete) Request Object
 ```
 
 ## Partial and Complete Request Objects
