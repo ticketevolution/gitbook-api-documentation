@@ -29,6 +29,7 @@ The POST data must follow this format.
   "orders": [
     {
       "buyer_id": "1116",
+      "seller_id": "1235",
       "items": [
         {
           "price": "10",
