@@ -24,6 +24,7 @@ The POST data must follow this format.
 
 ### Examples
 
+**Request**
 ```
 {
   "orders": [
@@ -40,5 +41,12 @@ The POST data must follow this format.
       ]
     }
   ]
+}
+```
+
+**Success Response**
+```
+{
+  
 }
 ```
