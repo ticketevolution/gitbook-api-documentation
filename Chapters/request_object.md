@@ -19,7 +19,7 @@ These endpoints support both traditional POST/GET endpoints, as well as a POST/P
 
 
 
-### POST/POST Lifecycle *recommended
+### POST/POST Lifecycle **recommended*
 
 This is describes the behavior when webhook_url is passed.
 Mapping to a resource can be done via internal ids in the webhook_url `client.com/callback/order/1234`, or the request object id can be saved from the initial response, and mapped when the webhook fires.
@@ -35,6 +35,9 @@ Tevo API->Client: POST (complete) Request Object
 ```
 
 ### POST/GET Lifecycle
+
+Without the webhook_url, the client can poll the get endpoint for the request to see its current state.  When it is complete the resource will be provided by that endpoint.
+
 ```sequence
 Title: Request Lifecycle
 participant Client
