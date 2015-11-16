@@ -42,10 +42,12 @@ The only difference is the partial request will always have a *pending* *state*,
 
 ## Examples
 
-### Request /v9/orders/open
+### /v9/orders/open
+
+**Request**
 ```
 {
-  "webhook_url": "lvh.me:3000/webhook_callback",
+  "webhook_url": "http://client.com/webhook_callback",
   "orders": [
     {
       "buyer_id": "1116",
@@ -62,3 +64,45 @@ The only difference is the partial request will always have a *pending* *state*,
   ],
 }
 ```
+
+**Initial Response**
+```
+{
+  "id": 123,
+  "state": "pending",
+  "error": null,
+  "result": null,
+  "params": {
+    "webhook_url": "http://client.com/webhook_callback",
+    "orders": **order_create
+}
+```
+[**order_create](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=9994275)
+
+**Webhook Response after processing**
+```
+{
+  "id": 123,
+  "state": "completed",
+  "error": null,
+  "result": **order_show,
+  "params": {
+    "webhook_url": "http://client.com/webhook_callback",
+    "orders": [
+      {
+        "buyer_id": "1116",
+        "seller_id": "1235",
+        "items": [
+          {
+            "price": "10",
+            "quantity": 2,
+            "ticket_group_id": "244910671",
+            "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
+          }
+        ]
+      }
+    ],
+  }
+}
+```
+[**order_show](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=4129639)
