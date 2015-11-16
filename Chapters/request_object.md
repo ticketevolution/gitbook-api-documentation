@@ -45,6 +45,20 @@ The only difference is the partial request will always have a *pending* *state*,
 ### Request /v9/orders/open
 ```
 {
-
+  "webhook_url": "lvh.me:3000/webhook_callback",
+  "orders": [
+    {
+      "buyer_id": "1116",
+      "seller_id": "1235",
+      "items": [
+        {
+          "price": "10",
+          "quantity": 2,
+          "ticket_group_id": "244910671",
+          "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
+        }
+      ]
+    }
+  ],
 }
 ```
