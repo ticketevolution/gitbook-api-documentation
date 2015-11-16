@@ -44,6 +44,19 @@ The POST data must follow this format.
 }
 ```
 
+**Initial Response**
+```
+{
+  "id": 123,
+  "state": "pending",
+  "error": null,
+  "result": null,
+  "params": {
+    "webhook_url": "http://client.com/webhook_callback",
+    "orders": **order_create
+}
+```
+
 **Webhook Response after processing**
 ```
 {
