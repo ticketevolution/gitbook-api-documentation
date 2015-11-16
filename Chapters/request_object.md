@@ -17,6 +17,23 @@ These objects are primarily used with endpoints supporting webhooks.
 
 These endpoints support both traditional POST/GET endpoints, as well as a POST/POST webhook behavior.  
 
+
+
+### POST/POST Lifecycle *recommended
+
+This is describes the behavior when webhook_url is passed.
+Mapping to a resource can be done via internal ids in the webhook_url `client.com/callback/order/1234`, or the request object id can be saved from the initial response, and mapped when the webhook fires.
+
+```sequence
+Title: Request Lifecycle
+participant Client
+participant Tevo API
+Client->Tevo API: POST data (provide webhook_url)
+Tevo API-->Client: (partial) Request Object
+Note over Client, Tevo API: After Processing
+Tevo API->Client: POST (complete) Request Object
+```
+
 ### POST/GET Lifecycle
 ```sequence
 Title: Request Lifecycle
@@ -27,18 +44,6 @@ Tevo API-->Client: (partial) Request Object
 Note over Client, Tevo API: Poll Show Endpoint Until State Changed
 Client->Tevo API: GET requests/{resource}/id
 Tevo API-->Client: Request Object in current state
-```
-
-### POST/POST Lifecycle
-
-```sequence
-Title: Request Lifecycle
-participant Client
-participant Tevo API
-Client->Tevo API: POST data (provide webhook_url)
-Tevo API-->Client: (partial) Request Object
-Note over Client, Tevo API: After Processing
-Tevo API->Client: POST (complete) Request Object
 ```
 
 ## Partial and Complete Request Objects
