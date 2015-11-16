@@ -6,7 +6,16 @@ Endpoints which have variable processing times, can respond with **Request Objec
 
 <!-- toc -->
 
+## Webhooks
+
+These objects are primarily used with endpoints supporting webhooks.
+
+>WebHooks are an HTTP POST callback request sent to URL of a user's choice in response to some event occurring. They offer simple and effective server to server communication without long running connections. As discussed on the WebHooks wiki they have a number of uses; we're using them to send real-time events. ~ [Phil Leggetter][webhook]
+
+
 ## Request Object Lifecycle
+
+These endpoints support both traditional POST/GET endpoints, as well as a POST/POST webhook behavior.  These strategies can be mixed and matched.
 
 ```sequence
 Title: Request Lifecycle
@@ -106,4 +115,5 @@ The only difference is the partial request will always have a *pending* *state*,
 }
 ```
 [**order_show](https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=4129639)
-[weebhook]:http://www.programmableweb.com/news/what-are-webhooks-and-how-do-they-enable-real-time-web/2012/01/30
+
+[webhook]: http://www.programmableweb.com/news/what-are-webhooks-and-how-do-they-enable-real-time-web/2012/01/30
