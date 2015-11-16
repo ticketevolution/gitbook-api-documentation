@@ -26,7 +26,7 @@ Client-->Tevo API: POST data (provide webhook_url)
 Tevo API-->Client: (partial) Request Object
 Note over Client, Tevo API: Poll Show Endpoint Until State Changed
 Client->Tevo API: GET requests/{resource}/id
-Tevo API-->Client: Current Request Object
+Tevo API-->Client: Request Object in current state
 ```
 
 ### POST/POST Lifecycle
