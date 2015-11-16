@@ -14,10 +14,30 @@ Endpoints responding with [Request Object's][RequestObject] accept a *webhook_ur
 
 The POST data must follow this format.
 
-| Name        | Required | Description                                                                |
-|-------------|----------|----------------------------------------------------------------------------|
-| webhook_url | no       | Resource to notify when [Completed Request Object][RequestObject] is ready |
-| orders      | yes      | 1 element array containing valid [Order POST data][OrderEndpoint]          |
+| Name        | Required | Type | Description                                                                |
+|-------------|----------|------|----------------------------------------------------------------------------|
+| webhook_url | no       | String | Resource to notify when [Completed Request Object][RequestObject] is ready |
+| orders      | yes      | Array |1 element array containing valid [Order POST data][OrderEndpoint]          |
 
 [RequestObject]: https://ticketevolution.gitbooks.io/api-documentation/content/Chapters/request_object.html
 [OrderEndpoint]: https://ticketevolution.atlassian.net/wiki/pages/viewpage.action?pageId=9994275
+
+### Examples
+
+```
+{
+  "orders": [
+    {
+      "buyer_id": "1116",
+      "items": [
+        {
+          "price": "10",
+          "quantity": 2,
+          "ticket_group_id": "244910671",
+          "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
+        }
+      ]
+    }
+  ]
+}
+```
