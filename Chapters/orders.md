@@ -47,7 +47,20 @@ The POST data must follow this format.
 **Success Response**
 ```
 {
-  
+  "orders": [
+    {
+      "buyer_id": "1116",
+      "seller_id": "1235",
+      "items": [
+        {
+          "price": "10",
+          "quantity": 2,
+          "ticket_group_id": "244910671",
+          "ticket_group_signature": "1fUXD9W+uimltBl57wrWmgUKoFCIk8kkGNt5HXOOPcg=--lcCF2yLSNRx3QeiHY4SI/g=="
+        }
+      ]
+    }
+  ]
 }
 ```
 
