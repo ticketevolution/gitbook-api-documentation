@@ -20,16 +20,12 @@ These endpoints support both traditional POST/GET endpoints, as well as a POST/P
 ### POST/GET Lifecycle
 ```sequence
 Title: Request Lifecycle
-participant Client Webhook URL
 participant Client
 participant Tevo API
-Note over Client, Tevo API: Initial Request
 Client-->Tevo API: POST data (provide webhook_url)
 Tevo API-->Client: (partial) Request Object
-Note over Client, Tevo API: After Processing
-Tevo API-->Client Webhook URL: (complete) Request Object
-Note over Client, Tevo API: At Any Point
-Client-->Tevo API: GET requests/{resource}/id
+Note over Client, Tevo API: Poll Show Endpoint Until State Changed
+Client->Tevo API: GET requests/{resource}/id
 Tevo API-->Client: current Request Object
 ```
 
